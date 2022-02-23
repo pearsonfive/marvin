@@ -1,0 +1,3 @@
+Module SharedGlobals
+
+End Module

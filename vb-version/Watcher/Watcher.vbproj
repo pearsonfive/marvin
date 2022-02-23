@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB550C8B-804E-4AAB-ABB8-9300F1035602}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>RatesDeskDev</RootNamespace>
+    <AssemblyName>RatesDeskDev.Marvin.Watcher</AssemblyName>
+    <MyType>Console</MyType>
+    <OptionStrict>On</OptionStrict>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RatesDeskDev.Marvin.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RatesDeskDev.Marvin.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OTIS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>W:\BROIL\APPS_DEV\Marvin\GoldenCopies\Otis\OTIS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TIBCO.EMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5b83db8ff05c64ba">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TIBCO.EMS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SharedComponents\Chatter.vb">
+      <Link>Shared Components\Chatter.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SharedComponents\Config.vb">
+      <Link>Shared Components\Config.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SharedComponents\Crumbler.vb">
+      <Link>Shared Components\Crumbler.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SharedComponents\FileProcessingUtilities.vb">
+      <Link>Shared Components\FileProcessingUtilities.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SharedComponents\HelperFunctions.vb">
+      <Link>Shared Components\HelperFunctions.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SharedComponents\Messenger.vb">
+      <Link>Shared Components\Messenger.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SharedComponents\Requisites.vb">
+      <Link>Shared Components\Requisites.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SharedComponents\SharedGlobals.vb">
+      <Link>Shared Components\SharedGlobals.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SharedComponents\StatusMessage.vb">
+      <Link>Shared Components\StatusMessage.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SharedComponents\Switches.vb">
+      <Link>Shared Components\Switches.vb</Link>
+    </Compile>
+    <Compile Include="..\..\SharedComponents\WhenFinished.vb">
+      <Link>Shared Components\WhenFinished.vb</Link>
+    </Compile>
+    <Compile Include="ActionModule.vb" />
+    <Compile Include="Constants.vb" />
+    <Compile Include="Watchers\FileFolderWatcher.vb" />
+    <Compile Include="Globals.vb" />
+    <Compile Include="HashCreator.vb" />
+    <Compile Include="JobGroup.vb" />
+    <Compile Include="MainModule.vb" />
+    <Compile Include="PayloadCreator.vb" />
+    <Compile Include="Watchers\PollingWatcher.vb" />
+    <Compile Include="Watchers\QueueWatcher.vb" />
+    <Compile Include="SymbolicsExpander.vb" />
+    <Compile Include="Job.vb" />
+    <Compile Include="JobDefinitionParser.vb" />
+    <Compile Include="Trigger.vb" />
+    <Compile Include="WatcherManager.vb" />
+    <Compile Include="WatcherBase.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Watchers\TopicWatcher.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Scripting">
+      <Guid>{420B2830-E718-11CF-893D-00A0C9054228}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Schemas\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
